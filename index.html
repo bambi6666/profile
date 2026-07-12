@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>冉冉 · AI 产品简历</title>
+<meta name="description" content="冉冉 — 近十年 C 端 AI 产品经验,Agent 产品 0-1、搜索全链路、LLM Rubric、智能硬件、团队管理">
+<style>
+  :root {
+    --ink: #16181d;
+    --ink-soft: #434852;
+    --meta: #7a8089;
+    --accent: #2b4acb;
+    --accent-soft: #eef1fc;
+    --line: #e4e6ea;
+    --bg: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.75;
+    font-size: 15px;
+  }
+  .page {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 64px 28px 80px;
+  }
+
+  /* ---------- Header ---------- */
+  header { margin-bottom: 40px; }
+  h1 {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    line-height: 1.2;
+  }
+  .headline {
+    margin-top: 6px;
+    font-size: 15px;
+    color: var(--ink-soft);
+    font-weight: 500;
+  }
+  .contact {
+    margin-top: 14px;
+    font-size: 13.5px;
+    color: var(--meta);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+  }
+  .contact a { color: var(--accent); text-decoration: none; }
+  .contact a:hover, .contact a:focus-visible { text-decoration: underline; }
+
+  /* ---------- Section ---------- */
+  section { margin-top: 44px; }
+  h2 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    color: var(--meta);
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 20px;
+  }
+
+  /* ---------- 能力标签 ---------- */
+  .summary { color: var(--ink-soft); }
+  .tags {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .tag {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 4px;
+    padding: 3px 10px;
+    white-space: nowrap;
+  }
+
+  /* ---------- 三代交互时间轴 ---------- */
+  .era {
+    position: relative;
+    padding-left: 26px;
+    margin-bottom: 8px;
+  }
+  .era::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 10px;
+    bottom: -8px;
+    width: 2px;
+    background: var(--line);
+  }
+  .era:last-child::before { bottom: 12px; }
+  .era-label {
+    position: relative;
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+  .era-label::before {
+    content: "";
+    position: absolute;
+    left: -26px;
+    top: 7px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--bg);
+    box-shadow: 0 0 0 2px var(--accent-soft);
+  }
+
+  /* ---------- 职位条目 ---------- */
+  .job { margin-bottom: 30px; }
+  .job:last-child { margin-bottom: 0; }
+  .job-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 12px;
+    margin-bottom: 8px;
+  }
+  .job-title { font-size: 16.5px; font-weight: 700; }
+  .job-org { font-size: 14px; color: var(--ink-soft); font-weight: 500; }
+  .job-time {
+    margin-left: auto;
+    font-size: 13px;
+    color: var(--meta);
+    font-variant-numeric: tabular-nums;
+  }
+  .job ul { list-style: none; }
+  .job li {
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 8px;
+    color: var(--ink-soft);
+  }
+  .job li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 11px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.55;
+  }
+  .job li strong { color: var(--ink); font-weight: 600; }
+
+  /* ---------- 教育 ---------- */
+  .edu-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 12px;
+    margin-bottom: 10px;
+  }
+  .edu-school { font-weight: 600; }
+  .edu-major { color: var(--ink-soft); }
+  .edu-time { margin-left: auto; font-size: 13px; color: var(--meta); font-variant-numeric: tabular-nums; }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    font-size: 12.5px;
+    color: var(--meta);
+  }
+
+  /* ---------- Mobile ---------- */
+  @media (max-width: 560px) {
+    .page { padding: 44px 20px 60px; }
+    h1 { font-size: 28px; }
+    .job-time, .edu-time { margin-left: 0; width: 100%; }
+  }
+
+  /* ---------- Print ---------- */
+  @media print {
+    body { font-size: 12.5px; }
+    .page { padding: 0; max-width: none; }
+    section { margin-top: 24px; }
+    .job { break-inside: avoid; }
+    a { color: var(--ink); text-decoration: none; }
+    footer { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <h1>冉冉</h1>
+    <p class="headline">近十年 C 端 AI 产品 · Agent 产品 0-1 · 「策略-训练-测评」闭环建设</p>
+    <div class="contact">
+      <span>北京</span>
+      <span>微信:ranranbambi</span>
+      <a href="https://github.com/bambi6666" target="_blank" rel="noopener">GitHub · bambi6666</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>能力标签</h2>
+    <p class="summary">近十年 C 端 AI 产品经验,完整经历传统搜索、智能硬件语音交互、到 LLM Agent 三代交互变革,擅长 0-1 产品架构与「策略-训练-测评」闭环建设;闲不下来,喜欢捣鼓软硬件小产品,MBTI 是 ENFJ。</p>
+    <div class="tags">
+      <span class="tag"># Agent 产品 0-1</span>
+      <span class="tag"># 搜索全链路(召回-排序-质量)</span>
+      <span class="tag"># LLM Rubric</span>
+      <span class="tag"># 智能硬件</span>
+      <span class="tag"># 团队管理</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>项目经验</h2>
+
+    <div class="era">
+      <div class="era-label">LLM AGENT</div>
+
+      <div class="job">
+        <div class="job-head">
+          <span class="job-title">小团 Agent Leader</span>
+          <span class="job-org">MT</span>
+          <span class="job-time">2024.10 – 至今</span>
+        </div>
+        <ul>
+          <li><strong>产品架构 0-1:</strong>构建小团 Chatbot 完整交互形态(入口/思考态/Markdown 与组件渲染);设计组件在不同用户偏好(效率型/决策型)下的动态化模型编排与准入策略;搭建任务中心与心跳机制,支撑下单预约、订阅监控、托管下单等长程任务交互;主动触达与多轮引导驱动用户增长,拓展车机、手机厂商、iOS Widget 等多终端。</li>
+          <li><strong>生成策略与模型训练:</strong>切分导购、办事、通用等用户场景并进行轨迹理想态设计,以 PT 模型训练为牵引完成 planning/tool/response 等环节 SFT 数据合成与 RL 奖励偏好构建;复杂场景使用 Skill 编排,并通过 query-router 等模型分流提升端到端体验;建立 Rubric 测评归因体系,推动数据飞轮自动化。</li>
+          <li><strong>上下文 Harness:</strong>设计静态 prompt 体系与动态上下文注入/压缩策略,适配不同场景上下文最优且耗时可控;优化记忆生产与环境感知数据的编排策略;统一 Tool Service 并设计 chunk 重组策略。</li>
+          <li><strong>团队管理:</strong>管理 10 人产品团队,AI Builder 率超 50%(独立完成环节前后端开发,借助工具完成 Q-A 全轨迹数据合成),团队周均产出亿量级 token;沉淀快慢环双循环优化方法论。</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <span class="job-title">问一问 / 点点 AI 搜索产品</span>
+          <span class="job-org">小红书</span>
+          <span class="job-time">2023.01 – 2024.09</span>
+        </div>
+        <ul>
+          <li><strong>生成策略:</strong>问一问(点点)初代产品,以「客观问答/主观决策」大场景思路,0-1 上线搜索 Overview 与 Copilot 助手两个应用场景;建立场景用户主次需求排序策略并融合到理想态设计,完成近线、在线双链路的生成策略优化、后训练 SFT 数据合成改写、端到端满意度测评与后验指标体系建设。</li>
+          <li><strong>搜索策略与上下文编排:</strong>优化 RAG/tool 搜索策略(改写、召回排序、拒识),整合笔记内容质量(信息量/信息价值精排策略)与真实人感提升、营销感治理,通过搜索效果优化提升 Agent 端到端回复质量与决策溯源的内容感知,增加 MRC 与上下文总结等策略完成通用搜索能力在问一问(点点)的重构。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="era">
+      <div class="era-label">语音交互 · 智能硬件</div>
+
+      <div class="job">
+        <div class="job-head">
+          <span class="job-title">智能硬件云端产品</span>
+          <span class="job-org">百度 SLG(小度)</span>
+          <span class="job-time">2017.07 – 2022.12</span>
+        </div>
+        <ul>
+          <li><strong>云端能力:</strong>建成全局 AI 搜索与多轮对话能力(通用搜索/LBS/百度医生/AIoT 指令),落地智能音箱、健身镜、车机、智能家居等硬件;设计端云协同「感知-规划-执行」策略链路,结合设备状态与环境信号完成意图理解与任务规划,经技能编排与指令执行反馈闭环落在多形态硬件上。</li>
+          <li><strong>NLU 策略:</strong>搭建 NLU 文法策略与 Intent 意图套餐体系,优化时效性、动态模板、内容质量等多方向策略;建成自动化平台与 Pipeline,解决意图冷启动与模型自动化学习问题。</li>
+          <li><strong>评估团队:</strong>建立端到端与策略标准评估体系及标注平台,实现数据驱动闭环,管理约 40 人梯队评估团队。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="era">
+      <div class="era-label">传统搜索</div>
+
+      <div class="job">
+        <div class="job-head">
+          <span class="job-title">通用搜索产品经理</span>
+          <span class="job-org">百度 MEG(搜索)</span>
+          <span class="job-time">2016.02 – 2017.03</span>
+        </div>
+        <ul>
+          <li><strong>行业块分类:</strong>建立行业 query 块分类体系,负责 NLP 在行业分类下的策略效果迭代。</li>
+          <li><strong>推荐策略:</strong>负责移动端搜后推荐与图文推荐的策略标准与效果优化,迭代推荐卡片提升推荐质量与点击。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>教育背景</h2>
+    <div class="edu-row">
+      <span class="edu-school">中国人民大学</span>
+      <span class="edu-major">信息资源管理(在职研)</span>
+      <span class="edu-time">2022.09 – 2025.07</span>
+    </div>
+    <div class="edu-row">
+      <span class="edu-school">北京信息科技大学</span>
+      <span class="edu-major">工商管理(本科)</span>
+      <span class="edu-time">2012.09 – 2016.07</span>
+    </div>
+  </section>
+
+  <footer>最后更新:2026 年 7 月</footer>
+
+</div>
+</body>
+</html>
