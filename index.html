@@ -57,7 +57,7 @@
   }
   .header-main {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
     gap: 24px;
   }
@@ -66,12 +66,6 @@
     font-weight: 700;
     letter-spacing: 0.04em;
     line-height: 1.15;
-  }
-  .headline {
-    margin-top: 5px;
-    font-size: 14.5px;
-    color: var(--accent-deep);
-    font-weight: 500;
   }
   .contact {
     justify-content: flex-end;
@@ -119,8 +113,14 @@
   }
 
   /* ---------- 核心能力 ---------- */
+  .summary {
+    max-width: 760px;
+    color: var(--ink-soft);
+    font-size: 14.5px;
+    line-height: 1.72;
+  }
   .tags {
-    margin-top: 15px;
+    margin-top: 12px;
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
@@ -264,16 +264,18 @@
 
   <header>
     <div class="header-main">
-      <div>
-        <h1>冉冉</h1>
-        <p class="headline">AI Agent 产品负责人 · 10 年 C 端 AI 产品</p>
-      </div>
+      <h1>冉冉</h1>
       <div class="contact">
         <span>北京</span>
         <span>微信:ranranbambi</span>
         <a href="https://github.com/bambi6666" target="_blank" rel="noopener">GitHub · bambi6666</a>
       </div>
     </div>
+  </header>
+
+  <section>
+    <h2>能力标签</h2>
+    <p class="summary">近十年 C 端 AI 产品经验，完整经历传统搜索、智能硬件语音交互、到 LLM Agent 三代交互变革，擅长 0-1 产品架构与「策略-训练-测评」闭环建设，关注 Agent 从数字世界到物理世界的迁移；闲不下来，喜欢捣鼓软硬件小产品，MBTI 是 ENFJ，个人作品集 GitHub。</p>
     <div class="tags" aria-label="核心能力">
       <span class="tag"># Agent 产品 0-1</span>
       <span class="tag"># 长程任务规划与执行</span>
@@ -282,7 +284,7 @@
       <span class="tag"># 智能硬件</span>
       <span class="tag"># 团队管理</span>
     </div>
-  </header>
+  </section>
 
   <section>
     <h2>项目经验</h2>
