@@ -24,18 +24,18 @@
     font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
     color: var(--ink);
     background: var(--surface);
-    line-height: 1.75;
-    font-size: 15.5px;
+    line-height: 1.66;
+    font-size: 15px;
   }
   .page {
     position: relative;
-    max-width: 900px;
-    margin: 28px auto;
-    padding: 58px 58px 72px;
+    max-width: 880px;
+    margin: 18px auto;
+    padding: 44px 48px 54px;
     background: var(--bg);
     border: 1px solid #e9ecf4;
-    border-radius: 24px;
-    box-shadow: 0 18px 55px rgba(42, 60, 120, 0.09);
+    border-radius: 20px;
+    box-shadow: 0 14px 42px rgba(42, 60, 120, 0.08);
     overflow: hidden;
   }
   .page::before {
@@ -51,35 +51,41 @@
   /* ---------- Header ---------- */
   header {
     position: relative;
-    margin-bottom: 38px;
-    padding-bottom: 28px;
+    margin-bottom: 28px;
+    padding-bottom: 22px;
     border-bottom: 1px solid var(--line);
   }
+  .header-main {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+  }
   h1 {
-    font-size: 42px;
+    font-size: 36px;
     font-weight: 700;
     letter-spacing: 0.04em;
-    line-height: 1.2;
+    line-height: 1.15;
   }
   .headline {
-    margin-top: 6px;
-    font-size: 15px;
+    margin-top: 5px;
+    font-size: 14.5px;
     color: var(--accent-deep);
     font-weight: 500;
   }
   .contact {
-    margin-top: 14px;
-    font-size: 13.5px;
+    justify-content: flex-end;
+    font-size: 12.5px;
     color: var(--meta);
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
   }
   .contact span, .contact a {
     display: inline-flex;
     align-items: center;
-    min-height: 28px;
-    padding: 3px 10px;
+    min-height: 26px;
+    padding: 2px 9px;
     border: 1px solid #e2e6f1;
     border-radius: 999px;
     background: #fafbfe;
@@ -88,7 +94,7 @@
   .contact a:hover, .contact a:focus-visible { text-decoration: underline; }
 
   /* ---------- Section ---------- */
-  section { margin-top: 38px; }
+  section { margin-top: 28px; }
   h2 {
     display: flex;
     align-items: center;
@@ -98,9 +104,9 @@
     letter-spacing: 0.28em;
     color: var(--meta);
     text-transform: uppercase;
-    padding-bottom: 11px;
+    padding-bottom: 9px;
     border-bottom: 1px solid var(--line);
-    margin-bottom: 18px;
+    margin-bottom: 14px;
   }
   h2::before {
     content: "";
@@ -112,52 +118,31 @@
     box-shadow: 0 0 0 4px var(--accent-soft);
   }
 
-  /* ---------- 能力标签 ---------- */
-  .summary { max-width: 760px; color: var(--ink-soft); }
+  /* ---------- 核心能力 ---------- */
   .tags {
-    margin-top: 16px;
+    margin-top: 15px;
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
   }
   .tag {
-    font-size: 13px;
+    font-size: 12.5px;
     font-weight: 600;
     color: var(--accent);
     background: var(--accent-soft);
     border: 1px solid #dce3ff;
     border-radius: 4px;
-    padding: 3px 10px;
+    padding: 2px 8px;
     white-space: nowrap;
   }
-
-  /* ---------- 工作背景 ---------- */
-  .career-row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 4px 12px;
-    margin-bottom: 10px;
-  }
-  .career-time {
-    min-width: 132px;
-    color: var(--meta);
-    font-size: 13px;
-    font-variant-numeric: tabular-nums;
-  }
-  .career-org { color: var(--ink-soft); font-weight: 600; }
-  .career-role { color: var(--ink-soft); }
 
   /* ---------- 三代交互时间轴 ---------- */
   .era {
     position: relative;
-    padding-left: 26px;
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-bottom: 2px;
-    margin-bottom: 16px;
+    padding: 15px 16px 1px 24px;
+    margin-bottom: 12px;
     border: 1px solid #e7eaf4;
-    border-radius: 16px;
+    border-radius: 14px;
     background: #fbfcff;
   }
   .era::before {
@@ -176,12 +161,12 @@
     font-weight: 700;
     letter-spacing: 0.12em;
     color: var(--accent);
-    margin-bottom: 14px;
+    margin-bottom: 10px;
   }
   .era-label::before {
     content: "";
     position: absolute;
-    left: -26px;
+    left: -24px;
     top: 7px;
     width: 10px;
     height: 10px;
@@ -192,16 +177,16 @@
   }
 
   /* ---------- 职位条目 ---------- */
-  .job { margin-bottom: 30px; }
+  .job { margin-bottom: 22px; }
   .job:last-child { margin-bottom: 0; }
   .job-head {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
     gap: 4px 12px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
-  .job-title { font-size: 16.5px; font-weight: 700; }
+  .job-title { font-size: 16px; font-weight: 700; }
   .job-org { font-size: 14px; color: var(--ink-soft); font-weight: 500; }
   .job-time {
     margin-left: auto;
@@ -213,7 +198,7 @@
   .job li {
     position: relative;
     padding-left: 16px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     color: var(--ink-soft);
   }
   .job li::before {
@@ -242,8 +227,8 @@
   .edu-time { margin-left: auto; font-size: 13px; color: var(--meta); font-variant-numeric: tabular-nums; }
 
   footer {
-    margin-top: 48px;
-    padding-top: 16px;
+    margin-top: 34px;
+    padding-top: 12px;
     border-top: 1px solid var(--line);
     font-size: 12.5px;
     color: var(--meta);
@@ -251,10 +236,13 @@
 
   /* ---------- Mobile ---------- */
   @media (max-width: 560px) {
-    .page { margin: 0; padding: 44px 20px 60px; border: 0; border-radius: 0; box-shadow: none; }
-    h1 { font-size: 32px; }
+    .page { margin: 0; padding: 34px 18px 42px; border: 0; border-radius: 0; box-shadow: none; }
+    .header-main { align-items: flex-start; flex-direction: column; gap: 12px; }
+    h1 { font-size: 30px; }
+    .contact { justify-content: flex-start; }
+    section { margin-top: 24px; }
     .job-time, .edu-time { margin-left: 0; width: 100%; }
-    .era { padding-left: 22px; padding-right: 14px; }
+    .era { padding: 14px 12px 1px 22px; }
     .era-label::before { left: -22px; }
     .era::before { left: 5px; }
   }
@@ -275,19 +263,18 @@
 <div class="page">
 
   <header>
-    <h1>冉冉</h1>
-    <p class="headline">近十年 C 端 AI 产品 · Agent 产品 0-1 · 「策略-训练-测评」闭环建设</p>
-    <div class="contact">
-      <span>北京</span>
-      <span>微信:ranranbambi</span>
-      <a href="https://github.com/bambi6666" target="_blank" rel="noopener">GitHub · bambi6666</a>
+    <div class="header-main">
+      <div>
+        <h1>冉冉</h1>
+        <p class="headline">AI Agent 产品负责人 · 10 年 C 端 AI 产品</p>
+      </div>
+      <div class="contact">
+        <span>北京</span>
+        <span>微信:ranranbambi</span>
+        <a href="https://github.com/bambi6666" target="_blank" rel="noopener">GitHub · bambi6666</a>
+      </div>
     </div>
-  </header>
-
-  <section>
-    <h2>能力标签</h2>
-    <p class="summary">近十年 C 端 AI 产品经验，完整经历传统搜索、智能硬件语音交互、到 LLM Agent 三代交互变革，擅长 0-1 产品架构与「策略-训练-测评」闭环建设，关注 Agent 从数字世界到物理世界的迁移；闲不下来，喜欢捣鼓软硬件小产品，MBTI 是 ENFJ，个人作品集 GitHub。</p>
-    <div class="tags">
+    <div class="tags" aria-label="核心能力">
       <span class="tag"># Agent 产品 0-1</span>
       <span class="tag"># 长程任务规划与执行</span>
       <span class="tag"># 数据飞轮/轨迹合成</span>
@@ -295,31 +282,7 @@
       <span class="tag"># 智能硬件</span>
       <span class="tag"># 团队管理</span>
     </div>
-  </section>
-
-  <section>
-    <h2>工作背景</h2>
-    <div class="career-row">
-      <span class="career-time">2024.10 – 至今</span>
-      <span class="career-org">MT</span>
-      <span class="career-role">小团 Agent Leader</span>
-    </div>
-    <div class="career-row">
-      <span class="career-time">2023.01 – 2024.09</span>
-      <span class="career-org">小红书</span>
-      <span class="career-role">问一问 / 点点 AI 搜索产品</span>
-    </div>
-    <div class="career-row">
-      <span class="career-time">2017.07 – 2022.12</span>
-      <span class="career-org">百度 SLG（小度）</span>
-      <span class="career-role">智能硬件云端产品</span>
-    </div>
-    <div class="career-row">
-      <span class="career-time">2016.02 – 2017.03</span>
-      <span class="career-org">百度 MEG（搜索）</span>
-      <span class="career-role">通用搜索产品经理</span>
-    </div>
-  </section>
+  </header>
 
   <section>
     <h2>项目经验</h2>
