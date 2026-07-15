@@ -86,6 +86,23 @@
     white-space: nowrap;
   }
 
+  /* ---------- 工作背景 ---------- */
+  .career-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 12px;
+    margin-bottom: 10px;
+  }
+  .career-time {
+    min-width: 132px;
+    color: var(--meta);
+    font-size: 13px;
+    font-variant-numeric: tabular-nums;
+  }
+  .career-org { color: var(--ink-soft); font-weight: 600; }
+  .career-role { color: var(--ink-soft); }
+
   /* ---------- 三代交互时间轴 ---------- */
   .era {
     position: relative;
@@ -214,13 +231,37 @@
 
   <section>
     <h2>能力标签</h2>
-    <p class="summary">近十年 C 端 AI 产品经验,完整经历传统搜索、智能硬件语音交互、到 LLM Agent 三代交互变革,擅长 0-1 产品架构与「策略-训练-测评」闭环建设;闲不下来,喜欢捣鼓软硬件小产品,MBTI 是 ENFJ。</p>
+    <p class="summary">近十年 C 端 AI 产品经验，完整经历传统搜索、智能硬件语音交互、到 LLM Agent 三代交互变革，擅长 0-1 产品架构与「策略-训练-测评」闭环建设；闲不下来，喜欢捣鼓软硬件小产品，MBTI 是 ENFJ，个人作品集 GitHub。</p>
     <div class="tags">
       <span class="tag"># Agent 产品 0-1</span>
       <span class="tag"># 搜索全链路(召回-排序-质量)</span>
       <span class="tag"># LLM Rubric</span>
       <span class="tag"># 智能硬件</span>
       <span class="tag"># 团队管理</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>工作背景</h2>
+    <div class="career-row">
+      <span class="career-time">2024.10 – 至今</span>
+      <span class="career-org">MT</span>
+      <span class="career-role">小团 Agent Leader</span>
+    </div>
+    <div class="career-row">
+      <span class="career-time">2023.01 – 2024.09</span>
+      <span class="career-org">小红书</span>
+      <span class="career-role">问一问 / 点点 AI 搜索产品</span>
+    </div>
+    <div class="career-row">
+      <span class="career-time">2017.07 – 2022.12</span>
+      <span class="career-org">百度 SLG（小度）</span>
+      <span class="career-role">智能硬件云端产品</span>
+    </div>
+    <div class="career-row">
+      <span class="career-time">2016.02 – 2017.03</span>
+      <span class="career-org">百度 MEG（搜索）</span>
+      <span class="career-role">通用搜索产品经理</span>
     </div>
   </section>
 
@@ -237,10 +278,10 @@
           <span class="job-time">2024.10 – 至今</span>
         </div>
         <ul>
-          <li><strong>产品架构 0-1:</strong>构建小团 Chatbot 完整交互形态(入口/思考态/Markdown 与组件渲染);设计组件在不同用户偏好(效率型/决策型)下的动态化模型编排与准入策略;搭建任务中心与心跳机制,支撑下单预约、订阅监控、托管下单等长程任务交互;主动触达与多轮引导驱动用户增长,拓展车机、手机厂商、iOS Widget 等多终端。</li>
-          <li><strong>生成策略与模型训练:</strong>切分导购、办事、通用等用户场景并进行轨迹理想态设计,以 PT 模型训练为牵引完成 planning/tool/response 等环节 SFT 数据合成与 RL 奖励偏好构建;复杂场景使用 Skill 编排,并通过 query-router 等模型分流提升端到端体验;建立 Rubric 测评归因体系,推动数据飞轮自动化。</li>
-          <li><strong>上下文 Harness:</strong>设计静态 prompt 体系与动态上下文注入/压缩策略,适配不同场景上下文最优且耗时可控;优化记忆生产与环境感知数据的编排策略;统一 Tool Service 并设计 chunk 重组策略。</li>
-          <li><strong>团队管理:</strong>管理 10 人产品团队,AI Builder 率超 50%(独立完成环节前后端开发,借助工具完成 Q-A 全轨迹数据合成),团队周均产出亿量级 token;沉淀快慢环双循环优化方法论。</li>
+          <li><strong>产品架构 0-1：</strong>构建小团 Chatbot 完整交互形态（入口/思考态/Markdown 与组件渲染）；设计组件在不同用户偏好（效率型/决策型）下的动态化模型编排与准入策略；搭建任务中心与心跳机制，支撑下单预约、订阅监控、托管下单等长程任务交互；主动触达与多轮引导驱动用户增长，拓展车机、手机厂商、iOS Widget 等多终端。</li>
+          <li><strong>生成策略与模型训练：</strong>切分导购、办事、通用等用户场景并进行轨迹理想态设计，以 PT 模型训练为牵引完成 planning/tool/response 等环节 SFT 数据合成与 RL 奖励偏好构建；复杂场景使用 Skill 编排，并通过 query-router 等模型分流提升端到端体验；建立 Rubric 测评归因体系，推动数据飞轮自动化。</li>
+          <li><strong>上下文 Harness：</strong>设计静态 prompt 体系与动态上下文注入/压缩策略，适配不同场景上下文最优且耗时可控；优化记忆生产与环境感知数据的编排策略；统一 Tool Service 并设计 chunk 重组策略。</li>
+          <li><strong>团队管理：</strong>管理 10 人产品团队，AI Builder 率超 50%（独立完成环节前后端开发，借助工具完成 Q-A 全轨迹数据合成），团队周均消耗亿量级 token；沉淀快慢环双循环优化方法论。</li>
         </ul>
       </div>
 
@@ -251,8 +292,8 @@
           <span class="job-time">2023.01 – 2024.09</span>
         </div>
         <ul>
-          <li><strong>生成策略:</strong>问一问(点点)初代产品,以「客观问答/主观决策」大场景思路,0-1 上线搜索 Overview 与 Copilot 助手两个应用场景;建立场景用户主次需求排序策略并融合到理想态设计,完成近线、在线双链路的生成策略优化、后训练 SFT 数据合成改写、端到端满意度测评与后验指标体系建设。</li>
-          <li><strong>搜索策略与上下文编排:</strong>优化 RAG/tool 搜索策略(改写、召回排序、拒识),整合笔记内容质量(信息量/信息价值精排策略)与真实人感提升、营销感治理,通过搜索效果优化提升 Agent 端到端回复质量与决策溯源的内容感知,增加 MRC 与上下文总结等策略完成通用搜索能力在问一问(点点)的重构。</li>
+          <li><strong>生成策略：</strong>问一问（点点）初代产品，以「客观问答/主观决策」大场景思路，0-1 上线搜索 Overview 与 Copilot 助手两个应用场景；建立场景用户主次需求排序策略并融合到理想态设计，完成近线、在线双链路的生成策略优化、后训练 SFT 数据合成改写、端到端满意度测评与后验指标体系建设。</li>
+          <li><strong>搜索策略与上下文编排：</strong>优化 RAG/tool 搜索策略（改写、召回排序、拒识），整合笔记内容质量（信息量/信息价值精排策略）与真实人感提升、营销感治理，通过搜索效果优化提升 Agent 端到端回复质量与决策溯源的内容感知，增加 MRC 与上下文总结等策略完成通用搜索能力在问一问（点点）的重构。</li>
         </ul>
       </div>
     </div>
@@ -263,13 +304,13 @@
       <div class="job">
         <div class="job-head">
           <span class="job-title">智能硬件云端产品</span>
-          <span class="job-org">百度 SLG(小度)</span>
+          <span class="job-org">百度 SLG（小度）</span>
           <span class="job-time">2017.07 – 2022.12</span>
         </div>
         <ul>
-          <li><strong>云端能力:</strong>建成全局 AI 搜索与多轮对话能力(通用搜索/LBS/百度医生/AIoT 指令),落地智能音箱、健身镜、车机、智能家居等硬件;设计端云协同「感知-规划-执行」策略链路,结合设备状态与环境信号完成意图理解与任务规划,经技能编排与指令执行反馈闭环落在多形态硬件上。</li>
-          <li><strong>NLU 策略:</strong>搭建 NLU 文法策略与 Intent 意图套餐体系,优化时效性、动态模板、内容质量等多方向策略;建成自动化平台与 Pipeline,解决意图冷启动与模型自动化学习问题。</li>
-          <li><strong>评估团队:</strong>建立端到端与策略标准评估体系及标注平台,实现数据驱动闭环,管理约 40 人梯队评估团队。</li>
+          <li><strong>软硬结合：</strong>面向智能音箱、健身镜、车机、智能家居等多形态硬件，建成全局 AI 搜索与多轮对话能力（通用搜索/LBS/百度医生/AIoT 控制）；设计端云协同「感知-规划-执行」链路，融合端侧多模态信号（语音/视觉/触屏）与设备状态完成意图理解与任务规划，编排与指令下发-执行-反馈闭环，适配有屏/无屏、车载等交互形态。</li>
+          <li><strong>NLU 策略：</strong>搭建 NLU 文法策略与 Intent 意图套餐体系，覆盖设备控制、媒资点播、生活服务等硬件高频场景，优化时效性、动态模板、内容质量等策略；建成自动化平台与 Pipeline，解决意图冷启动与模型自动化学习。</li>
+          <li><strong>评估团队：</strong>建立端到端与策略标准评估体系及标注平台，实现数据驱动闭环，管理约 40 人梯队评估团队。</li>
         </ul>
       </div>
     </div>
@@ -280,12 +321,12 @@
       <div class="job">
         <div class="job-head">
           <span class="job-title">通用搜索产品经理</span>
-          <span class="job-org">百度 MEG(搜索)</span>
+          <span class="job-org">百度 MEG（搜索）</span>
           <span class="job-time">2016.02 – 2017.03</span>
         </div>
         <ul>
-          <li><strong>行业块分类:</strong>建立行业 query 块分类体系,负责 NLP 在行业分类下的策略效果迭代。</li>
-          <li><strong>推荐策略:</strong>负责移动端搜后推荐与图文推荐的策略标准与效果优化,迭代推荐卡片提升推荐质量与点击。</li>
+          <li><strong>行业块分类：</strong>建立行业 query 块分类体系，负责 NLP 在行业分类下的策略效果迭代。</li>
+          <li><strong>推荐策略：</strong>负责移动端搜后推荐与图文推荐的策略标准与效果优化，迭代推荐卡片提升推荐质量与点击。</li>
         </ul>
       </div>
     </div>
@@ -295,12 +336,12 @@
     <h2>教育背景</h2>
     <div class="edu-row">
       <span class="edu-school">中国人民大学</span>
-      <span class="edu-major">信息资源管理(在职研)</span>
+      <span class="edu-major">信息资源管理（在职研）</span>
       <span class="edu-time">2022.09 – 2025.07</span>
     </div>
     <div class="edu-row">
       <span class="edu-school">北京信息科技大学</span>
-      <span class="edu-major">工商管理(本科)</span>
+      <span class="edu-major">工商管理（本科）</span>
       <span class="edu-time">2012.09 – 2016.07</span>
     </div>
   </section>
